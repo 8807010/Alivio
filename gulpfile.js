@@ -55,14 +55,14 @@ let isProd = false; // dev by default
 
 const clean = () => {
   return del([buildFolder])
-}
+};
 
 //deploy
 const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
-    return gulp.src('./build/**/*')
+    return gulp.src('./app/**/*')
         .pipe(ghPages());
 });
 
@@ -97,7 +97,7 @@ const svgSprites = () => {
       },
     }))
     .pipe(dest(paths.buildImgFolder));
-}
+};
 
 // scss styles
 const styles = () => {
@@ -178,7 +178,7 @@ const scripts = () => {
     })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
-}
+};
 
 // scripts backend
 const scriptsBackend = () => {
@@ -218,12 +218,12 @@ const scriptsBackend = () => {
     })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
-}
+};
 
 const resources = () => {
   return src(`${paths.resourcesFolder}/**`)
-    .pipe(dest(buildFolder))
-}
+    .pipe(dest(buildFolder));
+};
 
 const images = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
@@ -236,13 +236,13 @@ const images = () => {
         optimizationLevel: 2
       }),
     ])))
-    .pipe(dest(paths.buildImgFolder))
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const webpImages = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
     .pipe(webp())
-    .pipe(dest(paths.buildImgFolder))
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const avifImages = () => {
@@ -262,7 +262,7 @@ const htmlInclude = () => {
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
-}
+};
 
 const watchFiles = () => {
   browserSync.init({
@@ -280,7 +280,7 @@ const watchFiles = () => {
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);
-}
+};
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,avif,woff2}`, {
@@ -305,7 +305,7 @@ const rewrite = () => {
       manifest
     }))
     .pipe(dest(buildFolder));
-}
+};
 
 const htmlMinify = () => {
   return src(`${buildFolder}/**/*.html`)
@@ -313,7 +313,7 @@ const htmlMinify = () => {
       collapseWhitespace: true
     }))
     .pipe(dest(buildFolder));
-}
+};
 
 const zipFiles = (done) => {
   del.sync([`${buildFolder}/*.zip`]);
@@ -326,7 +326,7 @@ const zipFiles = (done) => {
     ))
     .pipe(zip(`${rootFolder}.zip`))
     .pipe(dest(buildFolder));
-}
+};
 
 const toProd = (done) => {
   isProd = true;

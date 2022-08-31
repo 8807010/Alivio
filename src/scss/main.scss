@@ -5,7 +5,9 @@
 @import "settings";
 
 // Обнуление и общие параметры
-@import "base/null";
+@import "base/_null";
+@import "base/_btn";
+@import "base/_mobile-nav";
 
 // подключения компонентов страницы
 @import "./components/header";

@@ -1,18 +1,23 @@
 .footer {
   padding: 104px 0 144px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
   background-color: #245852;
   color: #fff;
 
   &__logo {
     margin-bottom: 74px;
-  }
 
-  &__logo-img {
-    display: block;
-    transition: all 0.3s ease;
+    &-img {
+      display: inline-block;
+      transition: all 0.3s ease;
 
-    &:hover {
-      transform: scale(1.2);
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -58,15 +63,18 @@
   .footer {
     padding: 80px 0 100px;
 
-    &__logo+* {
-      margin-top: 50px;
+    &__logo {
+      margin-bottom: 50px;
     }
 
     &__nav {
-      font-size: 22px;
 
-      &-item+&-item {
-        margin-top: 40px;
+      &-item {
+        font-size: 22px;
+
+        &+& {
+          margin-top: 40px;
+        }
       }
     }
   }
@@ -76,15 +84,18 @@
   .footer {
     padding: 40px 0 60px;
 
-    &__logo+* {
-      margin-top: 40px;
+    &__logo {
+      margin-bottom: 40px;
     }
 
     &__nav {
-      font-size: 18px;
 
-      &-item+&-item {
-        margin-top: 30px;
+      &-item {
+        font-size: 18px;
+
+        &+& {
+          margin-top: 30px;
+        }
       }
     }
   }

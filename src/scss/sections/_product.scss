@@ -1,6 +1,7 @@
 .product {
   padding-top: 120px;
   padding-bottom: 168px;
+  background-color: #fff;
 
   &__row {
     display: flex;
@@ -66,8 +67,12 @@
 
 @media (max-width: 1400px) {
 
-  .product__content-subtitle {
-    font-size: 40px;
+  .product {
+    padding-bottom: 0;
+
+    &__content-subtitle {
+      font-size: 40px;
+    }
   }
 }
 

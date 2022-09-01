@@ -93,6 +93,38 @@
         </div>
       </section>
 
+      <section class="story">
+        <div class="story__container container container-wide">
+          <div class="story__row">
+
+            <div class="story__content">
+              <h2 class="story__heading">Let's hear about Kayla's success story</h2>
+              <div class="story__text">
+                <p>See how well Alivio works in a real customer’s life.</p>
+              </div>
+              <div class="story__btn">
+                <a href="#" class="btn btn-big">Let’s get started</a>
+              </div>
+            </div>
+
+            <div class="story__video">
+              <div id="video-story-overlay" class="story__video-overlay">
+                <button id="video-story-btn" class="story__video-btn">
+                  <img id="video-story-btn-icon" width="82" height="82" src="./img/story/play-white.svg" alt="Play" />
+                </button>
+              </div>
+
+              <!-- <img src="./img/story/video-cover.jpg" alt="Video" class="story-video-object" /> -->
+
+              <video class="story__video-object" id="video-story">
+                <source src="./video/customer-story.mp4" type="video/mp4">
+              </video>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     @include('partials/footer.html')

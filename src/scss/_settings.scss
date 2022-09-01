@@ -133,7 +133,7 @@ body {
 }
 
 .container {
-  width: 1400px;
+  max-width: 1400px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -145,7 +145,7 @@ body {
 }
 
 .container-wide {
-  width: 1536px;
+  max-width: 1536px;
 
   @media (max-width: 1535px) {
     width: 100%;

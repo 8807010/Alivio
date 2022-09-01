@@ -14,11 +14,13 @@ a.btn {
   font-weight: 400;
   border-radius: 4px;
   transition: all 0.3s ease;
+  border: 1px solid #01996d;
 }
 
 .btn:hover,
 a.btn:hover {
-  opacity: 0.8;
+  background: #fff;
+  color: #01996d;
 }
 
 .btn-big,

@@ -10,7 +10,8 @@
 @import "base/_mobile-nav";
 
 // подключения компонентов страницы
-@import "./components/header";
+@import "./components/_header";
+@import "./components/_footer";
 
 // подключения секций страницы
 @import "./sections/_home";

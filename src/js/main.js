@@ -6,12 +6,6 @@
 
 import './_mobileNav.js';
 import './_video.js';
+import './_preloader.js';
 
 
-// const preloader = window.document.getElementById("preloader");
-
-// {
-//   if (preloader) {
-//     let show_content = window.setTimeout(() => preloader.style.display = "none", 2000);
-//   }
-// }

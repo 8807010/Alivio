@@ -13,6 +13,7 @@ a.btn {
   font-size: 20px;
   font-weight: 400;
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .btn:hover,
@@ -29,7 +30,7 @@ a.btn-big {
 
   .btn,
   a.btn {
-    min-height: 41px;
+    min-height: 50px;
     padding-left: 30px;
     padding-right: 30px;
   }

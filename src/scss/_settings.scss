@@ -160,23 +160,20 @@ body {
   overflow: hidden;
 }
 
-// .main {
-//   padding-bottom: 654px;
-//   position: relative;
-//   z-index: 2;
-
-//   @media (max-width: 991px) {
-//     padding-bottom: 500px;
-//   }
-
-//   @media (max-width: 500px) {
-//     padding-bottom: 400px;
-//   }
-// }
-
-
 .page {
   padding-bottom: 647px;
   position: relative;
   z-index: 2;
+
+  @media (max-width: 1399px) {
+    padding-bottom: 500px;
+  }
+
+  @media (max-width: 500px) {
+    padding-bottom: 647px;
+  }
+
+  @media (max-width: 376px) {
+    padding-bottom: 730px;
+  }
 }

@@ -110,6 +110,8 @@ body {
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 991px) {
@@ -171,3 +173,10 @@ body {
 //     padding-bottom: 400px;
 //   }
 // }
+
+
+.page {
+  padding-bottom: 647px;
+  position: relative;
+  z-index: 2;
+}

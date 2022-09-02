@@ -2,9 +2,8 @@
 <html lang="en">
 
 @include('partials/head.html')
-@include('partials/mobile-nav.html')
 
-<body>
+<body class="body">
 
   <div id="preloader" class="preloader">
     <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +24,9 @@
   </div>
 
   <div class="page">
+    @include('partials/mobile-nav.html')
     @include('partials/header.html')
+
     <main class="main">
       <section class="home">
         <div class="home__container container">
@@ -40,10 +41,10 @@
             <div class="home__btn">
               <a href="#" class="home__btn-big btn">Find Your Way</a>
             </div>
+            <div class="home__bg-img">
+              <img src="./img/home/bg.jpg" alt="Background cover" />
+            </div>
           </div>
-        </div>
-        <div class="home__bg-img">
-          <img src="./img/home/bg.jpg" alt="Background cover" />
         </div>
       </section>
 

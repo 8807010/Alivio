@@ -6,6 +6,8 @@
   z-index: -1;
   background-color: #245852;
   color: #fff;
+  height: 100%;
+  overflow-y: scroll;
 
   &__container {
     display: flex;

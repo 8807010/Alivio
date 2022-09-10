@@ -415,6 +415,7 @@ a.btn-big {
   padding-bottom: 17px;
   border-bottom: 1px solid #d6d6d6;
   line-height: 1;
+  background-color: #fff;
 }
 .header__logo {
   -webkit-transition: all 0.3s ease;
